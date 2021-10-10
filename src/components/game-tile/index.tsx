@@ -41,7 +41,6 @@ function GameTile({
   tags,
   onGameTry,
 }: GameTileProps) {
-  console.log("TILE");
   return (
     <StyledTile>
       <StyledTagsWrapper>
