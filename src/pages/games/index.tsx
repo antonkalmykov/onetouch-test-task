@@ -146,31 +146,29 @@ function GamesPage() {
           </Select>
         </StyledFiltersWrapper>
       </StyledHeader>
-      {gameCategories.map((category) => {
-        return (
-          <GameCategory
-            key={category}
-            isShown={
-              canShowAllCategories || selectedFilterOption.key === category
-            }
-          >
-            <GameCategory.Title>{category}:</GameCategory.Title>
-            <GameCategory.Content>
-              {getGames(gamesByCategory, category).map((game) => (
-                <GameTile
-                  key={game.name}
-                  name={game.name}
-                  thumbnailUrl={game.thumbnail}
-                  type={game.type}
-                  releaseDate={game.releaseDate}
-                  tags={game.tags}
-                  onGameTry={onGameTry(game.link)}
-                />
-              ))}
-            </GameCategory.Content>
-          </GameCategory>
-        );
-      })}
+      {gameCategories.map((category) => (
+        <GameCategory
+          key={category}
+          isShown={
+            canShowAllCategories || selectedFilterOption.key === category
+          }
+        >
+          <GameCategory.Title>{category}:</GameCategory.Title>
+          <GameCategory.Content>
+            {getGames(gamesByCategory, category).map((game) => (
+              <GameTile
+                key={game.name}
+                name={game.name}
+                thumbnailUrl={game.thumbnail}
+                type={game.type}
+                releaseDate={game.releaseDate}
+                tags={game.tags}
+                onGameTry={onGameTry(game.link)}
+              />
+            ))}
+          </GameCategory.Content>
+        </GameCategory>
+      ))}
     </PageWrapper>
   );
 }
