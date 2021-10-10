@@ -141,7 +141,6 @@ function GamesPage() {
           >
             <GameCategory.Title>{category}:</GameCategory.Title>
             <GameCategory.Content>
-              <GameTile.ContentLoader loading={loading} />
               {getGames(gamesByCategory, category).map((game) => (
                 <GameTile
                   key={game.name}
