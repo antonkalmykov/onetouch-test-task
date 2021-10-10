@@ -9,7 +9,7 @@
 
 1. Clone repo.
 2. Go to project's folder and run `npm install`.
-3. Create `.env` file in project's root folder root and copy environment variable from `.env.example` file into it.
+3. Create `.env` file in project's root folder and copy environment variable from `.env.example` file into it.
 4. Fill in variable values in `.env` file with correct data (default value for `REACT_APP_SERVER_URL` variable is `http://localhost:3001/games`).
 5. Start local server with command `npm run server`.
 6. Start application with command `npm run start`.
