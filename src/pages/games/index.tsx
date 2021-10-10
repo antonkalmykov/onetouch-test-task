@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 
 import PageWrapper from "../../components/page-wrapper";
 import Select from "../../components/select";
@@ -20,6 +20,7 @@ import {
 } from "../../types";
 import { sortOptions, staticFilterOptions } from "./settings";
 import { capitalize } from "../../helpers";
+import Loader from "../../components/loader/loader";
 
 const getGames = (
   sortedGames: {
@@ -78,7 +79,20 @@ function GamesPage() {
     }
   }, [data, splitGamesAndSort, selectedSortOption.key]);
 
-  const onModalClose = () => setModalOpen(false);
+  useLayoutEffect(() => {
+    const body = document.getElementsByTagName("body");
+
+    if (gameUrl) {
+      body[0].style.overflow = "hidden";
+    } else {
+      body[0].style.overflow = "visible";
+    }
+  }, [gameUrl]);
+
+  const onModalClose = () => {
+    setModalOpen(false);
+    setGameUrl("");
+  };
   const onGameTry = (gameUrl: string) => () => {
     setGameUrl(gameUrl);
     setModalOpen(true);
@@ -94,6 +108,7 @@ function GamesPage() {
 
   return (
     <PageWrapper>
+      <Loader loading={loading} />
       <Modal isOpen={isModalOpen} onClose={onModalClose}>
         <Iframe src={gameUrl} />
       </Modal>
