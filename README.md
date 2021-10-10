@@ -1,7 +1,7 @@
 ## Pre requirements
 
 1. Install NodeJs (version 12 or higher ). You can use [n](https://github.com/tj/n) or [nvm](https://github.com/nvm-sh/nvm) for this.
-2. Install plugins for your IDE in order to use use [prettier](https://prettier.io/docs/en/editors.html) and [eslint](https://eslint.org/docs/user-guide/integrations).
+2. Install plugins for your IDE in order to use [prettier](https://prettier.io/docs/en/editors.html) and [eslint](https://eslint.org/docs/user-guide/integrations).
 3. Please review [json-server](https://github.com/typicode/json-server) documentation to be familiar about how to connect and run local game's API.
 
 
