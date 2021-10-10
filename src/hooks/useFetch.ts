@@ -1,4 +1,5 @@
 import { useState, useCallback } from "react";
+import { toast } from "react-toastify";
 
 import { GameList } from "../types";
 
@@ -17,7 +18,10 @@ function useFetch() {
         setLoading(false);
         setData(data);
       })
-      .catch((e) => console.log(e));
+      .catch((e) => {
+        console.error(e);
+        toast.error("An error has occurred. Try reload the page.");
+      });
   }, []);
 
   return { data, loading, fetchData };
