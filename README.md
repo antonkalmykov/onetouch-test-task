@@ -16,9 +16,6 @@
 7. Go to http://localhost:3000.
 
 
-## Install and run for live server
-
-
 ## Code style
 
 For code style use `Prettier` and `ESLint`. Please make sure you have installed Prettier and ESLint plugins for your IDE.
