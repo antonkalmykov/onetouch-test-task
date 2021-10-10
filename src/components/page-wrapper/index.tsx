@@ -21,7 +21,7 @@ function PageWrapper({ children }: PageWrapperProps) {
         draggable
         pauseOnHover
       />
-      <StyledPageWrapper>{children}</StyledPageWrapper>;
+      <StyledPageWrapper>{children}</StyledPageWrapper>
     </>
   );
 }
