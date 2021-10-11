@@ -1,5 +1,3 @@
-import React from "react";
-
 import { StyledIframe } from "./styled";
 
 type IframeProps = {
