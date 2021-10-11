@@ -1,7 +1,6 @@
 import { StyledLoader, StyledImageWrapper } from "./styled";
 
 import { ReactComponent as LoaderImage } from "../../assets/images/loader.svg";
-import React from "react";
 
 type LoaderProps = {
   loading: boolean;
