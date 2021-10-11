@@ -1,8 +1,18 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 type OptionProps = {
   selected?: boolean;
 };
+
+const openAnimation = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`;
 
 export const StyledSelectWrapper = styled.div`
   display: flex;
@@ -70,6 +80,7 @@ export const StyledOptionList = styled.ul`
   padding: 16px;
   list-style: none;
   background-color: #231f20;
+  animation: ${openAnimation} 0.3s;
   z-index: 10;
 
   &::before {
